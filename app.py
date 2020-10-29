@@ -7,7 +7,6 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def get_data():
-    un = request.args.get('username', type = str)
-    url = "https://www.instagram.com/"+"{0}".format(un) + "/?__a=1"
+    url = "https://www.instagram.com/sidhu_moosewala/?__a=1"
     return requests.get(url).content
 app.run()
